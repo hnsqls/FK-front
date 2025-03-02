@@ -91,6 +91,71 @@ undefine 都是js才产生的，null是我们自己设置的（后端响应）�
 
 
 
+3）string
+
+```html
+<a href="https://www.baidu.com">百度</a>
+```
+
+用java和 JavaScript 串来表示上述字符串
+
+java
+
+```java
+String s1 = "<a href=\"https://www.baidu.com\">百度</a>"   //转义
+  String s2 = """
+        String s1 = "<a href="https://www.baidu.com">百度</a>"
+        """; // 8以上的才支持
+```
+
+![image-20250302221824121](images/JavaScript.assets/image-20250302221824121.png)
+
+
+
+JavaScript
+
+```javascript
+let s1 = '<a href="https://www.baidu.com">百度</a>'
+
+let s3 =`<a href="https://www.baidu.com">百度</a>`
+```
+
+![image-20250302222124500](images/JavaScript.assets/image-20250302222124500.png)
+
+
+
+模板字符串
+
+需求拼接 URI的请求参数
+
+```txt
+/test?name=li&age=20
+/test?name=liu&age=21
+```
+
+传统方法拼
+
+```javascript
+let name = "li"
+let age = 20
+let uri = "/test?name=" +name + "&age=" +age
+```
+
+![image-20250302222616957](images/JavaScript.assets/image-20250302222616957.png)
+
+模板字符串拼接
+
+```javascript
+let name = "li"
+let age = 20
+
+let uri = `/test?name=${name}&age=${age}`
+```
+
+![image-20250302222812258](images/JavaScript.assets/image-20250302222812258.png)
+
+
+
 ## 运算符表达式
 
 ## 控制语句
