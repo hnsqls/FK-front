@@ -226,6 +226,66 @@ Falsy
 
 
 
+## 对象类型
+
+1）Function
+
+定义
+
+```javascript
+function 函数名（参数）{
+    // 函数体
+    return 结果；
+}
+```
+
+
+
+例子
+
+```javascript
+function add(a,b){
+    return a +b;
+}
+```
+
+函数调用
+
+```函数名（实参）```
+
+
+
+![image-20250302225704316](images/JavaScript.assets/image-20250302225704316.png)
+
+和Java相比，定义函数的时候，不需要定义类型，当然参数也可以是任意类型。
+
+在调用的时候，参数的类型不固定，甚至数量也不固定
+
+![image-20250302225953906](images/JavaScript.assets/image-20250302225953906.png)
+
+* 默认参数
+
+Java中默认参数
+
+@RequestionParam(defaultValue="1")
+
+js
+
+```javascript
+function pagenation(page = 1,size = 10){
+    console.log(page,size)
+}
+```
+
+![image-20250302230335526](images/JavaScript.assets/image-20250302230335526.png)
+
+* 匿名函数
+* 箭头函数
+* 函数是对象
+* 作用域
+
+
+
 ## 运算符表达式
 
 ## 控制语句
