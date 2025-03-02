@@ -156,6 +156,43 @@ let uri = `/test?name=${name}&age=${age}`
 
 
 
+4） number 和bigint
+
+ number 浮点数
+
+![image-20250302223523088](images/JavaScript.assets/image-20250302223523088.png)
+
+类型转换
+
+```javascript
+parseInt(10.0000) #10
+
+parseInt(10.05) #10
+
+parseInt(10.05) /3 #3.3333333333333335
+
+
+parseInt("10.0000") #10
+"50" -0
+50
+"10.5"-0
+10.5
+("10.5"-0) /3
+3.5
+
+parseInt("ssada") #NaN
+```
+
+
+
+bigint 正数
+
+数字+n 例如 10n
+
+![image-20250302224410078](images/JavaScript.assets/image-20250302224410078.png)
+
+
+
 ## 运算符表达式
 
 ## 控制语句
