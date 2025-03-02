@@ -193,6 +193,39 @@ bigint 正数
 
 
 
+6)boolean
+
+```javascript
+let a = 1;
+if(a){
+    console.log("进入了判断")
+}
+```
+
+![image-20250302224827782](images/JavaScript.assets/image-20250302224827782.png)
+
+
+
+java就不行
+
+![image-20250302224801706](images/JavaScript.assets/image-20250302224801706.png)
+
+* Truthy
+* Falsy
+
+当需要条件判断时，这个值，被当作true 的值归为Truthy，否则Falsy
+
+
+
+Falsy
+
+* false
+* nullish(null,undefined)
+* 0 ,0n,Nan
+* "",'',Nan
+
+
+
 ## 运算符表达式
 
 ## 控制语句
