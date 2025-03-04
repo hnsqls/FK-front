@@ -341,6 +341,60 @@ document.getElementById("p2").onclick = (function (){
 ![image-20250304170527631](images/JavaScript.assets/image-20250304170527631.png)
 
 * 函数是对象
+
+1.函数也可以赋值,
+
+```js
+function adb(){
+    console.log("abc");
+}
+document.getElementById("p1").onclick = abc
+```
+
+2.函数是对象---有属性,有方法
+
+```js
+function adb(){
+    console.log("abc");
+}
+
+console.dir(adb)
+```
+
+![image-20250304172431107](images/JavaScript.assets/image-20250304172431107.png)
+
+带f 的是方法,不带的是属性,[[]]是内置属性
+
+3.可以作为方法的参数
+
+```js
+function a(){
+    console.log(a);
+}
+function b(fn){    //fn 表示函数类型的对象
+    console.log(b);
+    fn();           //调用函数对象
+}
+```
+
+![image-20250304173300631](images/JavaScript.assets/image-20250304173300631.png)
+
+4. 作为方法的返回值
+
+```js
+function c(){
+    console.log("c")
+    function d(){
+        console.log("d")
+    }
+    return d;
+}
+c
+c()()
+```
+
+![image-20250304173600774](images/JavaScript.assets/image-20250304173600774.png)
+
 * 作用域
 
 
