@@ -280,7 +280,66 @@ function pagenation(page = 1,size = 10){
 ![image-20250302230335526](images/JavaScript.assets/image-20250302230335526.png)
 
 * 匿名函数
+
+语法
+
+```js
+(function (参数){
+    //函数体
+    return xx;
+})
+```
+
+例子
+
+```js
+(function (a,b){
+    return a + b;
+})
+```
+
+怎么调用呢?没有名字
+
+使用场景,
+
+只调用一次,之后就不用了就在其后面添加参数
+
+```js
+(function (a,b){
+    return a + b;
+})(1,2)
+```
+
+作为其他对象的方法
+
+```js
+document.getElementById("p2").onclick = (function (){
+    console.log("鼠标点击")
+})
+```
+
+![image-20250304164948202](images/JavaScript.assets/image-20250304164948202.png)
+
+ 
+
 * 箭头函数
+
+语法
+
+```js
+(参数) => {
+    //语句
+}
+```
+
+如果只有一个参数 ()可以省略
+
+如果只有一个语句,{}可以省略
+
+
+
+![image-20250304170527631](images/JavaScript.assets/image-20250304170527631.png)
+
 * 函数是对象
 * 作用域
 
