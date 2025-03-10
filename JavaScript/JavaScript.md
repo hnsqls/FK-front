@@ -448,6 +448,94 @@ a()(); // a()返回b,b()，b调用b,能取得元素吗，额可以
 
 
 
+2）数组
+
+语法
+
+```js
+let arr = [1,2,3]
+arr[0]
+a[0] = 5
+arr.length
+for(let i = 0 ;i < arr.length; i++){
+    console.log(arr[i])
+}
+
+```
+
+API
+
+* push shift splice
+
+```java
+let arr = [1,2,3]
+arr.push(4)  // 返回值是4，在数组的尾部添加4 元素
+arr.shift()  // 返回值是数组开头元素，将元素开头剔除
+arr.splice(起点,删除个数)  
+```
+
+* join
+
+```js
+let arr = ['a','b','c'];
+arr.join() //"a,b,c"默认是，连接
+arr.join("_") // 可以指定连接方式
+```
+
+
+
+* map,filter,foreach
+
+ [1,2,3,5]   => [10,20,30,50]
+
+```js
+let arr = [1,2,3,5]
+for(let i = 0; i < arr.length; i ++){
+    arr[i] = a[i] *10;
+}
+
+function add(i){
+    return i * 10
+}
+arr.map(add)
+arr.map((i) =>{return i *10});
+arr.map(i =>return i *10);
+
+```
+
+filter   [1,2,3,4,5,6,7,8]   => [1,3,5,7]
+
+```js
+let arr =  [1,2,3,4,5,6,7,8]
+for(let i = 0 ; i < arr.length; i ++){
+    if(arr[i]%2 == 0){
+        arr.splice(i,1)
+        i--
+    }
+}
+arr.filter((i)=>{return i%2})
+arr.filter(i=>  i%2 )
+```
+
+foreach
+
+```js
+let arr = [1,2,3,4,5]
+for(let i = 0; i < arr.length; i ++){
+    console.log(arr[i])
+}
+
+arr.forEach((i)=> console.log(i))
+```
+
+
+
+tips: map，filter，不会改变原数组，。
+
+高阶函数，函数接收函数作为参数 map,filter,forEach
+
+回调函数，最为函数参数的函数
+
 ## 运算符表达式
 
 ## 控制语句
