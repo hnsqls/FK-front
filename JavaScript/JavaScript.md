@@ -397,6 +397,38 @@ c()()
 
 * 作用域
 
+  函数可以嵌套
+
+  ```js
+  function a(){
+      functionb(){
+          
+      }
+  }
+  ```
+
+  例子
+
+  ```js
+  function c(){
+      var h = 30;
+  }
+  var z = 50
+  function a(){
+      var y = 20;
+      function b(){
+          var x = 1var
+          console.log()
+      }
+      b();
+  }
+  a();
+  // a执行调用b.b可以访问的参数，x,y,z. 不能访问h。
+  
+  ```
+
+  
+
 
 
 ## 运算符表达式
