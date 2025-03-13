@@ -631,6 +631,66 @@ console.log(stu)
 
 ## 运算符表达式
 
+1) ===
+
+严格相等运算符，用作逻辑判断。
+
+```'js
+1 ==1     
+1 == '1'
+1=== '1'
+```
+
+![image-20250313150626972](images/JavaScript.assets/image-20250313150626972.png)
+
+2) ||
+
+需求不传参数默认是男
+
+```js
+function sex(sex = '男'){
+   console.log(sex);
+}
+```
+
+![image-20250313151202380](images/JavaScript.assets/image-20250313151202380.png)
+
+或者写法
+
+```js
+function sex(gender){
+    if(gender === undefined){
+        gender = "男"
+    }
+    console.log(gender);
+}
+```
+
+在或者
+
+```js
+function sex(gender){
+ gender = (gender === undefined) ? "男" : gender;
+  
+ console.log(gender)
+}
+```
+
+再或者
+
+```js
+function sex(gender){
+    gender =  gender || '男';
+    console.log(gender)
+}
+```
+
+
+
+
+
+
+
 ## 控制语句
 
 ## API
