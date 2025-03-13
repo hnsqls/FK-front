@@ -536,6 +536,99 @@ tips: map，filter，不会改变原数组，。
 
 回调函数，最为函数参数的函数
 
+3）Object
+
+语法
+
+```js
+let obj ={
+    属性名：值,
+    方法名：值,
+    get 函数名(){},
+    set 函数名（）{}
+}
+```
+
+例子
+
+```js
+let user ={
+    name:"hnsqls",
+    age:20,
+    study: function(){
+        console.log(this.name +"正在学习 ")
+    }
+        
+}
+```
+
+```js
+let name = "hnsqls"
+let age = 20
+let study = function(){
+    console.log(this.name +  "正在学习")
+}
+let stu =  {name,age,study}
+```
+
+```js
+let user ={
+    name:"hnsqls",
+    age:20,
+    study{
+        console.log(this.name +"正在学习 ")
+    }
+        
+}
+```
+
+get,set 方法
+
+```js
+let stu = {
+_name:null,
+get name(){
+return this._name;
+},
+set name(name){
+ this._name =name;
+}
+}
+```
+
+方法的调用和java 不一样
+
+![image-20250313142632554](images/JavaScript.assets/image-20250313142632554.png)
+
+set 方法就是 直接赋值 name = "Xxx"
+
+get 方法就是 直接名称name
+
+对比一下java 的对象
+
+* java 的Object类的模板，规定了属性，方法。
+* js中的对象，属性，方法可以随时加减。
+
+```js
+let stu = {name:"hnsqls"}
+console.log(stu)
+stu.age =21
+console.log(stu)
+
+stu.study = function(){
+    return this.age + this.name + "在学习"
+}
+console.log(stu)
+stu.study()
+
+delete stu.age
+console.log(stu)
+```
+
+![image-20250313143641724](images/JavaScript.assets/image-20250313143641724.png)
+
+
+
 ## 运算符表达式
 
 ## 控制语句
