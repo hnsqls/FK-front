@@ -721,7 +721,61 @@ console.log(user.profile?.name); // 输出 "John"
 console.log(user.address?.city); // 输出 undefined，但不会报错
 ```
 
+4) ... 的使用
 
+... 展开语法
+
+
+
+展开数组
+
+```js
+let arr[] = [1,2,3,4]
+let res[] = [...arr]
+console.log(res)
+```
+
+```js
+let a = [1,2,3,4]
+let b = [9,8,7]
+
+let res = [...a,5,6,... b]
+
+console.log(res)
+```
+
+函数参数
+
+```js
+function sum(a, b, c) {
+    return a + b + c;
+}
+
+const numbers = [1, 2, 3];
+console.log(sum(...numbers)); // 输出 6
+```
+
+
+
+
+
+展开对象
+
+```js
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+const merged = { ...obj1, ...obj2 };
+console.log(merged); // 输出 { a: 1, b: 2, c: 3, d: 4 }
+```
+
+覆盖属性
+
+```js
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const merged = { ...obj1, ...obj2 };
+console.log(merged); // 输出 { a: 1, b: 3, c: 4 }
+```
 
 
 
