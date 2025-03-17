@@ -685,7 +685,41 @@ function sex(gender){
 }
 ```
 
+3） ？？与？.
 
+需求：undefinde 或者是null 设置默认值
+
+ ```js
+function sex(gender){
+   if(gender === undefined || gender === null){
+       gender = '男'
+   }
+    console.log(gender)
+}
+ ```
+
+```js
+function sex(gender){
+    gender = gender ?? '男'
+    console.log(gender)
+}
+```
+
+gender 不是nullish,就可以赋值，否则就默认。
+
+
+
+?. `?.` 是可选链操作符，用于在访问对象的属性时避免 `undefined` 或 `null` 导致的错误
+
+```js
+const user = {
+    profile: {
+        name: "John"
+    }
+};
+console.log(user.profile?.name); // 输出 "John"
+console.log(user.address?.city); // 输出 undefined，但不会报错
+```
 
 
 
