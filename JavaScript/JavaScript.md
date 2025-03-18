@@ -898,7 +898,9 @@ for (const {name,age} of a2){
 }
 ```
 
+3) try catch
 
+ 
 
 
 
