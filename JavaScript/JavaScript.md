@@ -779,9 +779,63 @@ console.log(merged); // 输出 { a: 1, b: 3, c: 4 }
 
 
 
+5） []{}
+
+解构赋值
+
+[]
+
+用在声明变量时
+
+```js
+let arr =[1,2,3]
+let [a,b,c] = arr;
+```
+
+用在声明参数时
+
+```js
+let arr =[1,2,3]
+
+function test(a,b,c){
+    console.log(a,b,c)
+}
+
+function test([a,b,c]){
+    console.log(a,b,c)
+}
+```
+
+
+
+{}
+
+用在声明变量时
+
+```js
+let obj = {name:"张三",age:18}
+let {name,age} = obj;
+
+```
+
+用在声明参数上
+
+```js
+function test({name,age}){
+    console.log(name,age)
+}
+```
+
+
+
+
+
+
+
 ## 控制语句
 
 ## API
 
 ## 模块化
 
+​	
