@@ -834,6 +834,49 @@ function test({name,age}){
 
 ## 控制语句
 
+* if else
+* switch
+* while
+* do while
+* for 
+* for ... in
+* for .... of
+* try catch
+
+
+
+1) for ... in
+
+用来遍历对象
+
+```js
+let father = {name:"hnsqls",age: 20}
+
+for(const n in father ){
+    console.log(n)
+}
+```
+
+tips: const n  表示遍历出来的属性名称
+
+​		方法名也能被遍历出来
+
+​		遍历子对象时，父对象的属性也会跟着遍历出来
+
+* 获取属性值要用[],而不能用.语法,也就是n只是名称
+
+```js
+for (const n in father){
+    console.log(n,father[n])
+}
+```
+
+
+
+
+
+
+
 ## API
 
 ## 模块化
