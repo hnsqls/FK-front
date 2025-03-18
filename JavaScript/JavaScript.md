@@ -873,6 +873,33 @@ for (const n in father){
 
 
 
+2) for of
+
+遍历数组
+
+```js
+let a = [1,2,3]
+
+for(const i of a1){
+    console.log(i)
+}
+
+let a2 = [
+	{name:"hnsqls",age:18},
+    {name:"hn",age:18},
+    {name:"sq",age:18},
+]
+
+for (const obj of a2){
+    console.log(obj.name,obj.age)
+}
+for (const {name,age} of a2){
+    console.log(name,age)
+}
+```
+
+
+
 
 
 
