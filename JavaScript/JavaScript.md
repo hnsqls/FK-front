@@ -904,9 +904,115 @@ for (const {name,age} of a2){
 
 
 
+# nvm-windows 下载
+
+1. 卸载现有的node.js---------- 控制面板卸载
+2. 下载安装包:[Releases · coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
+
+通知不用选
+
+![image-20250324164652712](images/JavaScript.assets/image-20250324164652712.png)
+
+下载后环境变量自动添加
+![image-20250324165034192](images/JavaScript.assets/image-20250324165034192.png)
+
+使用 ```nvm - v ``` 查看是否有问题
+
+3. 换源
+
+```shell
+nvm node_mirror https://npmmirror.com/mirrors/node/
+nvm npm_mirror https://npmmirror.com/mirrors/npm/
+```
+
+4. 下载node 环境
+
+查看node的版本
+
+```shell
+nvm list available
+```
+
+官方的支持：[nodejs/Release: Node.js Release Working Group](https://github.com/nodejs/release?tab=readme-ov-file#release-schedule)
+
+![image-20250324171246171](images/JavaScript.assets/image-20250324171246171.png)
+
+发版真的是太快了。
+
+我之前的项目需要18.20.7版本，在下载一个LTS版本 22.14.0版本
+
+通过nvm下载
+
+```shell
+nvm install 18.20.7
+```
+
+```shell
+nvm install 22.14.0
+```
+
+通过 nvm list 查看下载的版本
+
+通过 nvm use 版本 选择使用的版本
+
+6.检查npm ,是否是国内源
+
+```shell
+npm get registry
+```
+
+若不是国内员，则修改
+
+```shell
+npm config set registry https://registry.npmmirror.com/
+```
+
+
+
+
+
 
 
 ## API
+
+服务搭建 前端项目
+
+express 服务器
+
+Express.js 是一个基于 Node.js 的快速、开放、极简的 Web 应用框架，是 Node.js 生态中最流行的 Web 框架之一。
+
+下载
+
+```shell
+npm install express --save-dev
+```
+
+* --save 添加到配置依赖文件中
+* --dev 尽在开发环境使用
+
+启动项目
+
+需要写个启动js
+
+```js
+import express from 'express'
+
+const app = express()
+app.use(express.static('../static')) 
+app.listen(7070)
+```
+
+通过终端
+
+```shell
+node main.js 
+```
+
+浏览器访问静态资源
+
+![image-20250324175156751](../../个人计划/实习/image-20250324175156751.png)
+
+
 
 ## 模块化
 
